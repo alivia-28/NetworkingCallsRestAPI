@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D116A6E9585EE7882A0A1BE /* Pods_NetworkingCallsRestAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B91183800AE78F3CCAA393 /* Pods_NetworkingCallsRestAPI.framework */; };
 		C3E752E7271E6B970015D844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E752E6271E6B970015D844 /* AppDelegate.swift */; };
 		C3E752E9271E6B970015D844 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E752E8271E6B970015D844 /* SceneDelegate.swift */; };
 		C3E752EB271E6B970015D844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E752EA271E6B970015D844 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0228C5BA70D75C872E7DFA7E /* Pods-NetworkingCallsRestAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingCallsRestAPI.release.xcconfig"; path = "Target Support Files/Pods-NetworkingCallsRestAPI/Pods-NetworkingCallsRestAPI.release.xcconfig"; sourceTree = "<group>"; };
+		436CCD2F5830F1DC6BB82669 /* Pods-NetworkingCallsRestAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingCallsRestAPI.debug.xcconfig"; path = "Target Support Files/Pods-NetworkingCallsRestAPI/Pods-NetworkingCallsRestAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		B0B91183800AE78F3CCAA393 /* Pods_NetworkingCallsRestAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingCallsRestAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E752E3271E6B970015D844 /* NetworkingCallsRestAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingCallsRestAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E752E6271E6B970015D844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3E752E8271E6B970015D844 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D116A6E9585EE7882A0A1BE /* Pods_NetworkingCallsRestAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7E8B16B21BD182C91485F8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				436CCD2F5830F1DC6BB82669 /* Pods-NetworkingCallsRestAPI.debug.xcconfig */,
+				0228C5BA70D75C872E7DFA7E /* Pods-NetworkingCallsRestAPI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C3E752DA271E6B960015D844 = {
 			isa = PBXGroup;
 			children = (
 				C3E752E5271E6B970015D844 /* NetworkingCallsRestAPI */,
 				C3E752E4271E6B970015D844 /* Products */,
+				B7E8B16B21BD182C91485F8D /* Pods */,
+				D083EAD06F556FB6B87C7920 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = NetworkingCallsRestAPI;
 			sourceTree = "<group>";
 		};
+		D083EAD06F556FB6B87C7920 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0B91183800AE78F3CCAA393 /* Pods_NetworkingCallsRestAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3E752F7271E6BA90015D844 /* Build configuration list for PBXNativeTarget "NetworkingCallsRestAPI" */;
 			buildPhases = (
+				8CA95340DA2CA96D65915F62 /* [CP] Check Pods Manifest.lock */,
 				C3E752DF271E6B970015D844 /* Sources */,
 				C3E752E0271E6B970015D844 /* Frameworks */,
 				C3E752E1271E6B970015D844 /* Resources */,
+				F6B944279D772E386BEDB695 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8CA95340DA2CA96D65915F62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkingCallsRestAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B944279D772E386BEDB695 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetworkingCallsRestAPI/Pods-NetworkingCallsRestAPI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetworkingCallsRestAPI/Pods-NetworkingCallsRestAPI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NetworkingCallsRestAPI/Pods-NetworkingCallsRestAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3E752DF271E6B970015D844 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		C3E752F8271E6BA90015D844 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 436CCD2F5830F1DC6BB82669 /* Pods-NetworkingCallsRestAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +371,7 @@
 		};
 		C3E752F9271E6BA90015D844 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0228C5BA70D75C872E7DFA7E /* Pods-NetworkingCallsRestAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
